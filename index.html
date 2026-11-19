@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Penlove Parfumerie – Parfums de luxe à Dakar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="brand">
+  <a class="logo" href="#top"><img src="images/logo.jpg" alt="Penlove Parfums &amp; Beauté"></a>
+  <span class="brand-name"><b>Penlove</b><small>Parfumerie</small></span>
+</div>
+  <div><a href="#collection">Collection</a><a href="#maison">La maison</a><a href="#commande">Commander</a><a href="#contact">Contact</a></div>
+  <button class="cartbtn" onclick="openCart()">Panier<b id="cc">0</b></button>
+</nav>
+
+<header class="top" id="top"><div class="hero">
+  <div>
+    <p class="k">Parfums &amp; Beauté · Sénégal</p>
+    <h1>Plus qu’un parfum,<br><em class="gold">une émotion…</em></h1>
+    <p>Parfums pour elle et lui, mini-parfums et huiles parfumées concentrées. Authentiques, soigneusement sélectionnés et livrés partout au Sénégal.</p>
+    <a class="btn" href="#collection">Découvrir la collection</a>
+    <a class="btn ghostbtn" href="https://wa.me/221782528199" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+  </div>
+  <div class="poster"><img src="images/affiche.jpg" alt="Penlove Parfums &amp; Beauté – Vos parfums préférés pour elle et lui"></div>
+</div></header>
+
+<div class="marq"><span id="mq"></span></div>
+
+<section id="collection">
+  <div class="title"><p>Nos créations</p><h2>La <span class="gold">Collection</span></h2></div>
+  
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="maison" style="background:#100c0e">
+  <div class="title"><p>La maison</p><h2>Pourquoi <span class="gold">Penlove</span> ?</h2></div>
+  <div class="why">
+    <div><h3>Huiles nobles</h3><p>Oud, rose de Damas, vanille de Madagascar : des matières premières sélectionnées.</p></div>
+    <div><h3>Tenue 12 heures</h3><p>Des concentrations en Eau de Parfum et Extrait pour un sillage durable.</p></div>
+    <div><h3>Livraison rapide</h3><p>Dakar en 24 h, régions en 48 à 72 h. Emballage cadeau offert.</p></div>
+    <div><h3>Paiement mobile</h3><p>Réglez simplement avec Wave ou Orange Money, en toute sécurité.</p></div>
+  </div>
+</section>
+
+<section id="commande">
+  <div class="title"><p>Une question ? Une commande ?</p><h2>Passer <span class="gold">commande</span></h2></div>
+  <div class="cmd">
+    <div class="cinfo">
+      <h3>Paiement simple et sécurisé</h3>
+      <p>Choisissez vos parfums, ouvrez votre panier puis validez le formulaire de paiement : vous réglez par <b>Wave</b> ou <b>Orange Money</b> et nous confirmons votre commande par téléphone.</p>
+      <div class="pays"><span class="wv">Wave</span><span class="omg">Orange Money</span></div>
+      <p style="color:var(--mute);font-size:.9rem">Livraison à Dakar en 24 h · Régions en 72 h · Emballage cadeau offert.</p>
+      <button class="btn" style="border:0" onclick="startOrder()">Ouvrir le formulaire de paiement</button>
+    </div>
+    <form class="cform" id="cf">
+      <h3>Nous écrire sur WhatsApp</h3>
+      <label for="cfn">Nom complet</label><input id="cfn" required placeholder="Awa Diop">
+      <label for="cft">Téléphone</label><input id="cft" required inputmode="tel" placeholder="77 123 45 67">
+      <label for="cfp">Parfum souhaité</label><select id="cfp"></select>
+      <label for="cfm">Message</label><textarea id="cfm" rows="3" placeholder="Format, quantité, question…"></textarea>
+      <button class="btn" style="border:0;width:100%;margin-top:18px" type="submit">Envoyer sur WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer id="contact">
+  Dakar, Sénégal · WhatsApp +221 78 252 81 99<br>
+  © 2026 Penlove Parfumerie. Tous droits réservés.
+</footer>
+
+<div class="veil" id="veil" onclick="closeAll()"></div>
+<aside class="drawer" id="drawer">
+  <div class="dh"><h2>Mon panier</h2><button class="x" onclick="closeAll()" aria-label="Fermer">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="df" id="df"></div>
+</aside>
+
+<div class="modal" id="modal"><div class="mc" id="mc"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
