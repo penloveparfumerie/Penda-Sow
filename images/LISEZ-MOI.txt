@@ -1,0 +1,6 @@
+Chaque parfum a sa photo : images/<f>.jpg  (le nom <f> est dans la liste P de script.js).
+Pour changer une photo : remplacez le fichier en gardant le meme nom.
+Prix : script.js, liste P, ligne pr:[30ml, 50ml, 100ml]. 0 = format non vendu.
+Exemple : pr:[0,18000,30000]  -> boutons 50 ml et 100 ml.
+
+lab:['35 ml'] dans script.js = texte affiche sur le bouton de format (ex : 35 ml, 105 ml, Pot).
